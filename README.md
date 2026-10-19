@@ -1,33 +1,80 @@
-# Nginx Web Server on Ubuntu
 
-## Overview
-Installed and configured Nginx on Ubuntu Linux
-to serve a custom HTML webpage locally.
+# My Nginx Web Server 🌐
 
-## What I Learned
-- Installing software with apt
-- Managing services with systemctl
-- Enabling services at startup
-- Creating a webpage using HTML
-- Testing Nginx configuration with nginx -t
-- Testing HTTP responses with curl
+This was one of my first hands-on Linux and DevOps projects. I wanted to understand how a web server works, so I installed Nginx on Ubuntu and used it to serve my own simple HTML webpage.
 
-## Technologies
+It helped me get comfortable with Linux services, terminal commands, and testing a website locally.
+
+## What I worked on
+
+- Installed Nginx using Ubuntu's package manager.
+- Created a custom HTML webpage.
+- Configured Nginx to serve my page locally.
+- Started and checked the Nginx service using `systemctl`.
+- Enabled Nginx to start automatically when Ubuntu boots.
+- Tested the configuration with `nginx -t`.
+- Checked the HTTP response using `curl`.
+- Uploaded the project to GitHub.
+
+## Tools I used
+
 - Ubuntu Linux
 - Nginx
 - HTML
-- Bash terminal
+- Linux terminal
 - Git and GitHub
 
-## How to Test
-Open http://localhost in a browser.
+## Project files
 
-Check the service:
-sudo systemctl status nginx
+```text
+nginx-web-server/
+├── index.html
+└── README.md
+```
 
-Test the configuration:
+## How to run it
+
+First, install Nginx on Ubuntu:
+
+```bash
+sudo apt update
+sudo apt install nginx
+```
+
+Start Nginx and enable it at startup:
+
+```bash
+sudo systemctl enable --now nginx
+```
+
+Copy the webpage from this project into Nginx's web directory:
+
+```bash
+sudo cp index.html /var/www/html/index.html
+```
+
+Check that the Nginx configuration is valid:
+
+```bash
 sudo nginx -t
+```
 
-Test the HTTP response:
+Then open `http://localhost` in your browser.
+
+You can also check the response from your terminal:
+
+```bash
 curl http://localhost
+```
 
+## What I learned
+
+This project gave me practical experience with installing software on Linux, managing services, serving HTML pages, and checking whether a web server is working correctly.
+
+I'm using projects like this to build my Linux fundamentals before moving into more advanced DevOps tools and workflows.
+
+## Author
+
+**Taaha Mustafa Khan**
+
+GitHub: https://github.com/taahakhan-stack
